@@ -14,6 +14,9 @@ h1 {
 body {
   margin: 0; }
 
+/*-------------------------------------------------------------
+#Couleur
+--------------------------------------------------------------*/
 header {
   overflow: hidden;
   display: flex;
@@ -56,13 +59,15 @@ nav {
           margin-top: 2px;
           border-top: 2px solid #000000;
           content: " ";
-          display: block; }
+          display: block;
+          transition: all .2s ease-in-out; }
         nav ul li .icon-plus:after {
           margin-top: -2px;
           border-top: 2px solid black;
           content: " ";
           display: block;
-          transform: rotate(90deg); }
+          transform: rotate(90deg);
+          transition: all .3s ease-in-out; }
       nav ul li ul {
         margin: 0;
         padding: 20px;
@@ -75,9 +80,20 @@ nav {
           display: block;
           width: 100%;
           padding: 0;
-          margin: 0;
-          white-space: wrap; }
+          margin: 0; }
       nav ul li.active h2 {
         color: #e69f70; }
+      nav ul li.active .icon-plus:before {
+        position: relative;
+        right: -4px;
+        width: 13px;
+        border-top-color: #e69f70;
+        transform: rotate(-45deg); }
+      nav ul li.active .icon-plus:after {
+        position: relative;
+        left: -4px;
+        width: 12px;
+        border-top-color: #e69f70;
+        transform: rotate(45deg); }
 
 /*# sourceMappingURL=style.css.map */

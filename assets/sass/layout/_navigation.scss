@@ -1,7 +1,7 @@
 nav{ 
     overflow:hidden;
     margin: 0;
-    background-color: #ebebeb;
+    background-color: $gray;
     padding: 20px;
 
     ul{
@@ -15,8 +15,8 @@ nav{
             margin: 0 0 2px;
             padding: 10px 0;
 
-            background-color: #ffffff;
-            
+            background-color: $white;
+
             img { margin-left: 20px; }
 
             h2{
@@ -28,7 +28,7 @@ nav{
                 margin-left: auto;               
                 width: 20px;
                 height: 20px;
-
+                
                 transform: translate(-20px, 10px);
 
 
@@ -37,6 +37,8 @@ nav{
                     border-top:2px solid #000000;
                     content:" ";
                     display: block;
+                    
+                    transition: all .2s ease-in-out; 
 
                 }
 
@@ -46,6 +48,8 @@ nav{
                     content:" ";
                     display:block;
                     transform: rotate(90deg);
+                    
+                    transition: all .3s ease-in-out; 
                 }
             }
 
@@ -56,21 +60,42 @@ nav{
                 width: 100%;
                 display: none;
                 background: #fafafa;
-                border-top: 1px solid #e69f70;
+                border-top: 1px solid $peach;
 
                 li{
                     display: block;
                     width: 100%;
                     padding: 0;
                     margin: 0;
-                    
-                    white-space: wrap;
+
                 }
             }
 
             &.active {
                 h2 {
-                    color: #e69f70;
+                   color: $peach;
+                }
+
+                .icon-plus:before{
+                    position: relative;
+                    right: -4px;
+                    width: 13px;
+                    
+                    border-top-color: $peach;
+                    
+                    transform: rotate(-45deg);
+                    
+                    
+                }
+                .icon-plus:after{
+                    position: relative;
+                    left: -4px;
+                    width: 12px;
+                    
+                    border-top-color: $peach;
+                    
+                    transform: rotate(45deg);
+                    
                 }
             }
 
